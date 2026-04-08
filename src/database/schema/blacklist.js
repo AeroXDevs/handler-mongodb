@@ -8,7 +8,6 @@ const blacklistSchema = new mongoose.Schema(
                 type: { type: String, enum: ['user', 'guild'], default: 'user' },
         },
         {
-                _id: false,
                 timestamps: { createdAt: 'createdAt', updatedAt: false },
         },
 );

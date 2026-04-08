@@ -11,7 +11,6 @@ const guildSchema = new mongoose.Schema(
                 bioUpdatedAt: { type: Date, default: null },
         },
         {
-                _id: false,
                 timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' },
         },
 );
