@@ -4,10 +4,10 @@ const environment = process.env.NODE_ENV || 'development';
 const isProduction = environment === 'production';
 
 export const config = {
-        token: process.env.TOKEN,
-        clientId: process.env.CLIENT_ID || (isProduction ? '1277525844319014955' : '1031120600858624000'),
+        token: process.env.TOKEN || '',
+        clientId: process.env.CLIENT_ID || '',
         prefix: '.',
-        ownerIds: process.env.OWNER_IDS ? process.env.OWNER_IDS.split(',') : ['931059762173464597'],
+        ownerIds: process.env.OWNER_IDS ? process.env.OWNER_IDS.split(',') : [],
 
         colors: {
                 bot: [214, 211, 203],
@@ -23,7 +23,7 @@ export const config = {
         version: '2.0.0',
 
         database: {
-                url: process.env.MONGODB_URI || process.env.DATABASE_URL,
+                url: process.env.MONGODB_URI || '',
         },
 
         cache: {
